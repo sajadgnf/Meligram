@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    height: 50px;
+    padding: 0 40px;
+}
+
+.name{
+    font-size: 1.2rem;
+    color: #0f9d58;
+}
+
+.logoutBtn{
+    border: none;
+    outline: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: #0f9d58;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.logoutBtn:hover{
+    background-color: #07713e;
+}
