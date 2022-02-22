@@ -13,6 +13,9 @@ import styles from "./Chats.module.css"
 // context
 import { AuthContext } from "../contexts/AuthContextProvider"
 
+// loader
+import loader from '../assets/loader.svg'
+
 const Chats = () => {
 
     const [loading, setLoading] = useState(true)
@@ -29,7 +32,7 @@ const Chats = () => {
             headers: {
                 "project-id": "c33c1075-3b3c-461c-8925-e313a6f03938",
                 "user-name": user.email,
-                "user-secret": user.uid
+                "user-secret": user.uid,
             }
         })
             .then(() => {
@@ -66,7 +69,7 @@ const Chats = () => {
         history.push('/')
     }
 
-    if (!user || loading) return "Loading..."
+    if (!user || loading) return <img src={loader} alt="Loading..." />
 
     return (
         <div className={styles.container}>
